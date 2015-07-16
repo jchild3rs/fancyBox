@@ -2014,5 +2014,11 @@
 
 		$("<style type='text/css'>.fancybox-margin{margin-right:" + (w2 - w1) + "px;}</style>").appendTo("head");
 	});
+	
+	if (typeof define === "function" && define.amd && define.amd.jQuery) {
+		define("fancybox", ["jquery"], function () {
+			return F;
+		});
+	}
 
 }(window, document, jQuery));
